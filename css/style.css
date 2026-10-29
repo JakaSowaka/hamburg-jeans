@@ -958,9 +958,21 @@ figure {
     justify-self: center;
     transform: rotate(2deg);
   }
-}
-/* Show the complete picture */
+/* Larger full-body image without cropping */
 section[aria-labelledby="intro-title"] .split__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
   object-fit: contain;
   object-position: center;
+}
+
+/* Give the image more room on desktop */
+@media (min-width: 56.25em) {
+  section[aria-labelledby="intro-title"] .split {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
 }
