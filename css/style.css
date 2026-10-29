@@ -959,3 +959,8 @@ figure {
     transform: rotate(2deg);
   }
 }
+/* Show the complete picture */
+section[aria-labelledby="intro-title"] .split__media img {
+  object-fit: contain;
+  object-position: center;
+}
